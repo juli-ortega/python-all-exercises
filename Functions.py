@@ -147,6 +147,25 @@ def add_digits(numbers):
         add += digit  
         numbers //= 10
     return add
+    
+#Trabajo Practico Numero 6
 
+def count_of_names_repeat(list_for_repeat):
+    count = {}
+
+    for i in list_for_repeat:
+        if i in count:
+            count[i] +=1
+        else:
+            count[i] = 1
+    
+    return count
+
+def lower_list ( list_receive):
+    k = 0
+    for i in list_receive:
+        list_receive[k] = i.lower()
+        k+=1
+    return list_receive
 
         
