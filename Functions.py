@@ -167,5 +167,47 @@ def lower_list ( list_receive):
         list_receive[k] = i.lower()
         k+=1
     return list_receive
+    
+#Trabajo Practico Numero 7
 
+def order_library(list_of_dictio):
+    return sorted(list_of_dictio, key=lambda x: x.get("Año de Publicación"))
+
+def insertion_sort(arr):
+    for i in range(1, len(arr)):
+        key = arr[i]
+        j = i - 1
+        while j >= 0 and len(key) < len(arr[j]):
+            arr[j + 1] = arr[j]
+            j -= 1
+        arr[j + 1] = key
+    
+    return arr
+
+def insertion_sort_ints(arr):
+    for i in range(1, len(arr)):
+        key = arr[i]
+        j = i - 1
+        while j >= 0 and key < arr[j]:
+            arr[j + 1] = arr[j]
+            j -= 1
+        arr[j + 1] = key
+    
+    return arr
+
+def order_strings_for_alpha(list_to_order):
+    return sorted(list_to_order)
+
+def bubble_sort(arr):
+    n = len(arr)
+    for i in range(n):
+        swapped = False
+        for j in range(0, n - i - 1):
+            if arr[j] > arr[j + 1]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]  # Intercambia los elementos
+                swapped = True
+        if not swapped:
+            break
+
+    return arr
         
