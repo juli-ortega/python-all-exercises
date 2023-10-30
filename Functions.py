@@ -211,3 +211,30 @@ def bubble_sort(arr):
 
     return arr
         
+#Trabajo Practico Numero 8
+
+
+def find_positions(a, b, start=0, positions=None):
+    if positions is None:
+        positions = [] 
+
+    index = a.find(b, start)
+
+    if index != -1:
+        positions.append(index)  
+
+        find_positions(a, b, index + 1, positions)
+
+    return positions
+
+def count_digits(num):
+    digits = str(num)
+    return len(digits)
+
+def combinations(lista, k, prefix=""):
+    if k == 0:
+        print(prefix)  
+        return
+
+    for char in lista:
+        combinations(lista, k - 1, prefix + char)
